@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AR Example with ar.js</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ar.js@2.9.3/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ar-nft@1.0.0/aframe/build/aframe-ar-nft.js"></script>
+</head>
+<body style="margin : 0px; overflow: hidden;">
+  <a-scene embedded arjs="trackingMethod: best;">
+    <a-nft
+      type="nft"
+      url="marker\samplemarker.jpg"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
+      <a-entity gltf-model="glb\POWERDEPO H.glb"></a-entity>
+    </a-nft>
+
+    <a-camera-static></a-camera-static>
+  </a-scene>
+</body>
+</html>
